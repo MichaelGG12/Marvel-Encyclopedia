@@ -1,0 +1,17 @@
+﻿@page "{id}"
+@model MarvelApp.Pages.EventModel
+@{
+    ViewData["Title"] = "Event page";
+}
+
+<div class="container">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
+        <div class="w-50 mx-auto mt-4">
+            <h5 class="card-title text-center">@Model.SearchResult.Data.Results[0].Title</h5>
+            <img src="@($"{@Model.SearchResult.Data.Results[0].Thumbnail.Path}.{@Model.SearchResult.Data.Results[0].Thumbnail.Extension}")" class="card-img-top" 
+            style="object-fit: cover; height: 300px">
+            <h5>Description</h5>
+            <p class="card-text">@Model.SearchResult.Data.Results[0].Description</p>
+        </div>
+    </div>
+</div>
