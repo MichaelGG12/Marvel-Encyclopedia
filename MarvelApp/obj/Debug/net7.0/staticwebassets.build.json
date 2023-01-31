@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "CVgvLwiY6RihfDYSDF4Y9QzktoGDZwQ5bcoRdqQhztA=",
+  "Hash": "NJAUs549QM45thwT15FRP5mTH09pCRJ44kIYh0bpzUQ=",
   "Source": "MarvelApp",
   "BasePath": "_content/MarvelApp",
   "Mode": "Default",
@@ -85,12 +85,12 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "C:\\Users\\mike_\\OneDrive\\Escritorio\\MarvelApp\\MarvelApp\\wwwroot\\js\\index.js",
+      "Identity": "C:\\Users\\mike_\\OneDrive\\Escritorio\\MarvelApp\\MarvelApp\\wwwroot\\js\\search.js",
       "SourceId": "MarvelApp",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\mike_\\OneDrive\\Escritorio\\MarvelApp\\MarvelApp\\wwwroot\\",
       "BasePath": "_content/MarvelApp",
-      "RelativePath": "js/index.js",
+      "RelativePath": "js/search.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -99,7 +99,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\index.js"
+      "OriginalItemSpec": "wwwroot\\js\\search.js"
     },
     {
       "Identity": "C:\\Users\\mike_\\OneDrive\\Escritorio\\MarvelApp\\MarvelApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",

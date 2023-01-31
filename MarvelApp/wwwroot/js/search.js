@@ -28,7 +28,7 @@ function renderData(item) {
     html +=
         `
                 <div class="col mb-4">
-                    <div class="card h-100">
+                    <div class="card h-100 border-0 shadow">
                         <img src="${item.thumbnail.path}.${item.thumbnail.extension}" class="card-img-top" style="object-fit: cover; height: 300px">
                         <div class="card-body">
                             ${selectedUrl}

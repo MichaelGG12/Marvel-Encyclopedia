@@ -2,7 +2,6 @@
 {
     public class SearchResult
     {
-        public string? AttributionText { get; set; }
         public Datawrapper? Data { get; set; }
         
         public class Datawrapper
@@ -18,7 +17,6 @@
             public string? Title { get; set; }
             public string? Description { get; set; }
             public Image? Thumbnail { get; set; }
-
             public ComicList? Comics { get; set; }
 
             public class Image
