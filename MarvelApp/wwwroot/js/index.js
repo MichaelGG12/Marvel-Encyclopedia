@@ -6,13 +6,22 @@ function renderData(item) {
 
     switch (selectedOption) {
         case "characters":
-            selectedUrl = `<a href="/Hero/${item.id}"><h5 class="card-title text-center">${item.name}</h5></a>`
+            selectedUrl = `<a href="/view/characters/${item.id}"><h5 class="card-title text-center">${item.name}</h5></a>`
             break;
         case "comics":
-            selectedUrl = `<a href="/Comic/${item.id}"><h5 class="card-title text-center">${item.title}</h5></a>`
+            selectedUrl = `<a href="/view/comics/${item.id}"><h5 class="card-title text-center">${item.title}</h5></a>`
             break;
         case "events":
-            selectedUrl = `<a href="/Event/${item.id}"><h5 class="card-title text-center">${item.title}</h5></a>`
+            selectedUrl = `<a href="/view/events/${item.id}"><h5 class="card-title text-center">${item.title}</h5></a>`
+            break;
+        case "creators":
+            selectedUrl = `<a href="/view/creators/${item.id}"><h5 class="card-title text-center">${item.fullName}</h5></a>`
+            break;
+        case "series":
+            selectedUrl = `<a href="/view/series/${item.id}"><h5 class="card-title text-center">${item.title}</h5></a>`
+            break;
+        case "stories":
+            selectedUrl = `<a href="/view/stories/${item.id}"><h5 class="card-title text-center">${item.title}</h5></a>`
             break;
     }
     
@@ -46,10 +55,19 @@ $(document).ready(function () {
             case "events":
                 selectedUrl = "Index?handler=ListsOfEvents";
                 break;
+            case "creators":
+                selectedUrl = "Index?handler=ListsOfCreators";
+                break;
+            case "series":
+                selectedUrl = "Index?handler=ListsOfSeries";
+                break;
+            case "stories":
+                selectedUrl = "Index?handler=ListsOfStories";
+                break;
         }
 
         $.ajax({
-            type: 'POST',
+            type: 'GET',
             url: selectedUrl,
             data: {
                 'givenTerm': $("#searchTerm").val()
@@ -61,7 +79,7 @@ $(document).ready(function () {
                 let resultsData = response.data;
                 resultsData.forEach(renderData);
                 $('#heroesContainer').html(html);
-                $('#resultsCount').html(`<p>Results: ${resultsData.length}</p>`);
+                $('#resultsCount').html(`<p>About ${resultsData.length} results</p>`);
             },
             error: (error) => {
                 console.log(JSON.stringify(error));

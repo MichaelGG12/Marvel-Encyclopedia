@@ -14,6 +14,7 @@
         {
             public int? Id { get; set; }
             public string? Name { get; set; }
+            public string? FullName { get; set; }
             public string? Title { get; set; }
             public string? Description { get; set; }
             public Image? Thumbnail { get; set; }
@@ -28,8 +29,6 @@
 
             public class ComicList
             {
-                public int? Available { get; set; }
-                public string? CollectionURI { get; set; }
                 public List<ComicSummary>? Items { get; set; }               
             }
 
