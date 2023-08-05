@@ -1,0 +1,34 @@
+﻿@page
+@model IndexModel
+@Html.AntiForgeryToken()
+@{
+    ViewData["Title"] = "";
+}
+
+<div class="text-center">
+    <div class="input-group p-2">
+        <select id="searchType" class="selectpicker border-0 shadow w-25">
+            <option value="characters">Characters</option>
+            <option value="comics">Comics</option>
+            <option value="events">Events</option>
+            <option value="creators">Creators</option>
+            <option value="series">Series</option>
+            <option value="stories">Stories</option>
+        </select>
+        <input type="search" class="form-control w-75 mx-auto shadow border-0" placeholder="" id="searchTerm" />
+    </div>
+    <div class="p-2">
+        <button type="button" class="btn btn-primary shadow border-0  w-25 mx-auto" id="handleSearch">Search</button>
+    </div>
+ </div>
+ 
+<div class="text-center">
+    <div class="container">
+        <div id="resultsCount"></div>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3" id="heroesContainer"></div>
+    </div>
+</div>
+
+@section Scripts{
+    <script src="~/js/search.js"></script>
+}
